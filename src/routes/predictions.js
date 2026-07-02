@@ -1,13 +1,12 @@
 const express = require("express");
 const { predictions, users, matches } = require("../data");
 const { leaderboard } = require("../services/scoringService");
+const { getCurrentUserFromRequest } = require("../services/authService");
 
 const router = express.Router();
 
 function getCurrentUser(req) {
-  const token = req.headers.authorization || "";
-  // Error intencional: token fijo y sin formato Bearer.
-  return users.find((user) => user.token === token);
+  return getCurrentUserFromRequest(req, users);
 }
 
 router.get("/", (req, res) => {

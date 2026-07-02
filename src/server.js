@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const matchesRoutes = require("./routes/matches");
 const predictionsRoutes = require("./routes/predictions");
+const authRoutes = require("./routes/auth");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,7 +14,7 @@ app.get("/api", (req, res) => {
   res.json({
     name: "Sports Predictions API",
     version: "1.0.0",
-    endpoints: ["/matches", "/predictions", "/predictions/leaderboard"]
+    endpoints: ["/auth/login", "/matches", "/predictions", "/predictions/leaderboard"]
   });
 });
 
@@ -23,6 +24,7 @@ app.get("/", (req, res) => {
 
 app.use("/matches", matchesRoutes);
 app.use("/predictions", predictionsRoutes);
+app.use("/auth", authRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor ejecutandose en http://localhost:${PORT}`);

@@ -6,8 +6,8 @@ const matches = [
 
 const predictions = [];
 const users = [
-  { id: 1, name: "ana", points: 0, token: "token-ana-fijo" },
-  { id: 2, name: "luis", points: 0, token: "token-luis-fijo" }
+  { id: 1, name: "ana", points: 0 },
+  { id: 2, name: "luis", points: 0 }
 ];
 
 module.exports = {
