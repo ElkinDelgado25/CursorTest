@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Predictions API</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">SportsPredict</div>
+        <a class="btn btn-outline" href="/api">Ver API</a>
+      </nav>
+      <section class="hero-content">
+        <p class="kicker">Backend de pronosticos deportivos</p>
+        <h1>Predice resultados y consulta tu ranking en segundos</h1>
+        <p class="subtitle">
+          API simple para gestionar partidos, pronosticos y leaderboard.
+          Ideal para pruebas, demos y proyectos internos.
+        </p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="/predictions/leaderboard">Ver leaderboard</a>
+          <a class="btn btn-secondary" href="/matches">Ver partidos</a>
+        </div>
+      </section>
+    </header>
+
+    <main class="container">
+      <section class="card-grid">
+        <article class="card">
+          <h2>Partidos disponibles</h2>
+          <p>Consulta eventos abiertos y cerrados desde el endpoint de partidos.</p>
+          <code>GET /matches</code>
+        </article>
+        <article class="card">
+          <h2>Envio de pronosticos</h2>
+          <p>Registra pronosticos de usuarios para cada partido.</p>
+          <code>POST /predictions</code>
+        </article>
+        <article class="card">
+          <h2>Ranking en vivo</h2>
+          <p>Revisa la tabla de posiciones actual con puntajes acumulados.</p>
+          <code>GET /predictions/leaderboard</code>
+        </article>
+      </section>
+
+      <section class="api-panel">
+        <h3>Rutas principales</h3>
+        <ul>
+          <li><strong>GET</strong> <code>/api</code> - Metadatos del servicio</li>
+          <li><strong>GET</strong> <code>/matches</code> - Lista de partidos</li>
+          <li><strong>POST</strong> <code>/matches/:id/settle</code> - Liquidar partido</li>
+          <li><strong>GET</strong> <code>/predictions</code> - Lista de pronosticos</li>
+          <li><strong>POST</strong> <code>/predictions</code> - Crear pronostico</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+  </html>

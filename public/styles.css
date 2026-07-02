@@ -1,0 +1,167 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b1220;
+  --bg-soft: #111a2c;
+  --text: #ecf2ff;
+  --text-soft: #b8c3db;
+  --primary: #46d3ff;
+  --primary-strong: #00b4f0;
+  --stroke: #25314a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top right, #182743, var(--bg) 46%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 2rem 1.2rem 4rem;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 4.2rem auto 0;
+}
+
+.kicker {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-size: 0.76rem;
+  margin-bottom: 0.7rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  max-width: 820px;
+}
+
+.subtitle {
+  color: var(--text-soft);
+  max-width: 700px;
+  font-size: 1.05rem;
+}
+
+.cta-group {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.8rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.7rem 1.1rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #03202a;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-strong);
+}
+
+.btn-secondary,
+.btn-outline {
+  background-color: transparent;
+  color: var(--text);
+  border-color: var(--stroke);
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  background-color: #1a2740;
+}
+
+.container {
+  max-width: 1100px;
+  margin: -1.5rem auto 0;
+  padding: 0 1.2rem 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card,
+.api-panel {
+  background: linear-gradient(160deg, #121f36, var(--bg-soft));
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.card h2 {
+  margin-top: 0.1rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  color: var(--text-soft);
+  line-height: 1.4;
+  min-height: 60px;
+}
+
+code {
+  background-color: #0a1324;
+  border: 1px solid #223152;
+  border-radius: 8px;
+  padding: 0.2rem 0.45rem;
+  font-size: 0.9rem;
+}
+
+.api-panel {
+  margin-top: 1rem;
+}
+
+.api-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.api-panel li {
+  color: var(--text-soft);
+}
+
+.api-panel strong {
+  color: #89e5ff;
+  margin-right: 0.25rem;
+}
